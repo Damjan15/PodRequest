@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -12,6 +12,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Chivo', 'sans-serif']
+      },
+      backgroundImage: {
+        bodyMobile: "url('../assets/mobile/image-host.jpg')"
       }
     },
   },
