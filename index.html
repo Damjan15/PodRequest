@@ -65,18 +65,20 @@
         </ul>
 
         <!-- Input -->
-        <form class="flex flex-col w-full mt-12">
+        <form class="flex flex-col w-full mt-12" id="emailForm">
 
           <!-- Form on mobile -->
           <div class="block md:hidden">
             <input
-              type="text"
+              type="email"
               placeholder="Email address"
+              id="emailMobile"
               class="w-full bg-darkBlue py-[14px] px-6 rounded-full text-white mb-6 placeholder:text-sm placeholder:leading-7 placeholder:font-bold focus:outline-none"
             />
             <!-- Error message -->
             <span
-              class="hidden text-[#FB3E3E] text-xs text-left ml-6 mt-2 leading-[14px]"
+              class="hidden text-[#FB3E3E] text-xs text-left ml-6 leading-[14px] mb-3"
+              id="errorMobile"
               >Oops! Please check your email</span
             >
 
@@ -90,7 +92,8 @@
           <div class="hidden md:block">
             <!-- Input & Button -->
             <div class="bg-darkBlue w-[427px] h-14 flex items-center justify-between rounded-full">
-                <input type="text" placeholder="Email address" class="flex-[0.9] h-full bg-transparent text-white pl-6 placeholder:text-sm placeholder:leading-7 placeholder:font-bold focus:outline-none">
+                <input type="email" placeholder="Email address" class="flex-[0.9] h-full bg-transparent text-white pl-6 placeholder:text-sm placeholder:leading-7 placeholder:font-bold focus:outline-none" id="emailDesktop">
+
                 <button class="bg-neonGreen rounded-full px-6 h-[46px] text-sm leading-7 mr-2 font-bold transition-colors duration-200 ease-in-out hover:bg-[#B3FFE2]">Request Access</button>
                 
             </div>
@@ -98,6 +101,7 @@
             <!-- Error message -->
             <span
               class="hidden text-[#FB3E3E] text-xs text-left ml-6 mt-2 leading-[14px]"
+              id="errorDesktop"
               >Oops! Please check your email</span
             >
           </div>
@@ -143,5 +147,9 @@
         <img src="assets/desktop/bg-pattern-dots.svg" alt="pattern-dots" class="hidden md:block md:absolute md:bottom-2 lg:right-0 lg:bottom-4">
       </section>
     </main>
+
+
+
+    <script src="js/app.js"></script>
   </body>
 </html>
