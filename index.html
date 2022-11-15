@@ -15,30 +15,32 @@
   </head>
   <body>
     <main class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-center py-16">
+      <!--==================== LOGO ====================-->
+      <div class="flex items-center justify-center py-16 md:justify-start">
         <img
           src="assets/desktop/logo.svg"
           alt="pod-request-logo"
           class="relative z-10"
         />
       </div>
+
       <!--==================== CONTENT ====================-->
       <section
-        id="content"
-        class="relative z-10 flex flex-col items-center justify-center text-center"
+        class="relative z-10 flex flex-col items-center justify-center text-center md:bg-veryDarkBlue md:max-w-[635px] md:h-[509px] md:text-left md:pt-24 md:absolute md:top-72 lg:max-w-[723px] lg:top-60"
       >
         <h1
-          class="text-white text-[26px] leading-[38px] uppercase mb-3 font-light"
+          class="text-white text-[26px] leading-[38px] uppercase mb-3 font-light md:text-5xl md:leading-[56px] lg:text-[52px] lg:leading-[62px]"
         >
           <span class="text-neonGreen">Publish your podcasts</span> everywhere
         </h1>
-        <p class="text-veryLightBlue font-light">
+        <p class="text-veryLightBlue font-light md:text-lg md:leading-7">
           Upload your audio to Pod with a single click. We’ll then distribute
           your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts
           and more!
         </p>
 
-        <ul class="w-full flex items-center gap-4 mt-6">
+        <!-- Only show logos here on smaller screens -->
+        <ul class="w-full flex items-center gap-4 mt-6 md:hidden">
           <li>
             <img src="assets/desktop/spotify.svg" alt="spotify-logo" />
           </li>
@@ -66,7 +68,7 @@
         <form class="flex flex-col w-full mt-12">
 
           <!-- Form on mobile -->
-          <div>
+          <div class="block md:hidden">
             <input
               type="text"
               placeholder="Email address"
@@ -85,14 +87,61 @@
 
 
           <!-- Form on desktop -->
-          <div class="hidden">
-            Form Desktop
+          <div class="hidden md:block">
+            <!-- Input & Button -->
+            <div class="bg-darkBlue w-[427px] h-14 flex items-center justify-between rounded-full">
+                <input type="text" placeholder="Email address" class="flex-[0.9] h-full bg-transparent text-white pl-6 placeholder:text-sm placeholder:leading-7 placeholder:font-bold focus:outline-none">
+                <button class="bg-neonGreen rounded-full px-6 h-[46px] text-sm leading-7 mr-2 font-bold transition-colors duration-200 ease-in-out hover:bg-[#B3FFE2]">Request Access</button>
+                
+            </div>
+
+            <!-- Error message -->
+            <span
+              class="hidden text-[#FB3E3E] text-xs text-left ml-6 mt-2 leading-[14px]"
+              >Oops! Please check your email</span
+            >
           </div>
         </form>
+
+        <!-- Only show these logos on larger screens -->
+        <ul class="w-full hidden items-center gap-4 mt-12 md:flex">
+            <li>
+              <img src="assets/desktop/spotify.svg" alt="spotify-logo" />
+            </li>
+  
+            <li>
+              <img src="assets/desktop/apple-podcast.svg" alt="apple-logo" />
+            </li>
+  
+            <li>
+              <img
+                src="assets/desktop/google-podcasts.svg"
+                alt="google-podcasts-logo"
+              />
+            </li>
+  
+            <li>
+              <img
+                src="assets/desktop/pocket-casts.svg"
+                alt="pocket-casts-logo"
+              />
+            </li>
+          </ul>
       </section>
 
-      <!--==================== IMAGE ====================-->
-      <section id="cover"></section>
+      <!--==================== IMAGES ====================-->
+      <section>
+
+        <!-- Tablet -->
+        <img src="assets/tablet/image-host.jpg" class="hidden md:block md:absolute md:top-0 md:-right-3 lg:hidden" alt="image-host">
+
+        <!-- Desktop -->
+        <img src="assets/desktop/image-host.jpg" alt="image-host" class="hidden lg:block lg:absolute lg:bottom-4 lg:right-0">
+
+
+        <!-- Pattern -->
+        <img src="assets/desktop/bg-pattern-dots.svg" alt="pattern-dots" class="hidden md:block md:absolute md:bottom-2 lg:right-0 lg:bottom-4">
+      </section>
     </main>
   </body>
 </html>
